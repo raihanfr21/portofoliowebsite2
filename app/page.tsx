@@ -71,12 +71,19 @@ const PORTFOLIO_DATA = {
       period: "Sep 2021 - Feb 2024",
       desc: "Assisted in organizing constituency visits (reses), managed social media content, and coordinated with local communities and stakeholders during field activities."
     },
-        {
+    {
       role: "Lecturer Assistant - Pengolahan Citra Digital Course",
       company: "Muhammadiyah Riau University",
       logo: "/logos/university.png", // Pastikan file ada di public/logos/
       period: "Jan 2024 - Jan 2024",
       desc: "Assisted the lecturer in delivering course content on digital image processing, covering fundamental concepts and image processing techniques. Supervised laboratory sessions and guided students in implementing image processing algorithms using relevant programming tools."
+    },
+    {
+      role: "Multimedia Internship",
+      company: "Tanjak Photography Pekanbaru",
+      logo: "/logos/company3.png", // Pastikan file ada di public/logos/
+      period: "Sep - Oct 2019 & Jan - Mar 2020",
+      desc: ""
     }
   ],
 
