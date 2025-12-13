@@ -48,7 +48,6 @@ const PORTFOLIO_DATA = {
 
   skills: ["APIs", "PHP", "PowerBI", "Python", "JavaScript", "Laravel", "React", "Next.js", "Node.js", "Tailwind CSS", "MySQL", "Google Cloud", "Docker", "CI/CD", "Data Science", "Macro VBA"],
   softSkills: [
-    "Public Speaking",
     "Leadership",
     "Time Management",
     "Problem Solving",
