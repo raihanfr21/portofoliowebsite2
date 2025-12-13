@@ -113,6 +113,7 @@ const PORTFOLIO_DATA = {
       title: "EyeTify",
       desc: "An mobile application for the challenges of early detection of eye diseases, especially for those with limited access to regular eye health services due to geographical, financial, or time constraints.",
       image: "/projects/projects1.jpg", // Pastikan file ada di public/projects/
+      video: "/projects/Post Launch EyeTify.mp4",
       tags: ["Machine Learning", "Mobile Development", "Cloud Computing"],
       link: "https://github.com/EyeTify"
     },
@@ -473,15 +474,30 @@ export default function Home() {
                 transition={{ type: "spring", stiffness: 300 }}
                 className="group border border-neutral-200 dark:border-neutral-800 rounded-2xl overflow-hidden bg-white dark:bg-neutral-900 flex flex-col h-full shadow-sm hover:shadow-2xl dark:hover:shadow-neutral-900/50 transition-all"
               >
-                {/* Project Image Preview */}
+ {/* Project Media Preview (Video or Image) */}
                 <div className="relative w-full h-56 overflow-hidden bg-neutral-200 dark:bg-neutral-800">
-                   <Image 
-                     src={project.image} 
-                     alt={project.title} 
-                     fill 
-                     className="object-cover group-hover:scale-105 transition-transform duration-500" 
-                   />
-                   {/* Overlay Link Icon */}
+                   {project.video ? (
+                     // JIKA ADA VIDEO: Tampilkan Video
+                     <video
+                       src={project.video}
+                       autoPlay
+                       muted
+                       loop
+                       playsInline
+                       poster={project.image} // Gambar muncul saat video loading
+                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                     />
+                   ) : (
+                     // JIKA TIDAK ADA VIDEO: Tampilkan Image biasa
+                     <Image 
+                       src={project.image} 
+                       alt={project.title} 
+                       fill 
+                       className="object-cover group-hover:scale-105 transition-transform duration-500" 
+                     />
+                   )}
+                   
+                   {/* Overlay Link Icon (Tetap Sama) */}
                    <a href={project.link} className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white z-10">
                       <div className="flex items-center gap-2 font-medium bg-white/20 backdrop-blur-md px-5 py-2.5 rounded-full border border-white/30 hover:bg-white/30 transition-colors">
                         View Project <ArrowUpRight size={18} />
