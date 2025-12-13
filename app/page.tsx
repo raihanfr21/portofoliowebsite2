@@ -97,7 +97,7 @@ const PORTFOLIO_DATA = {
       school: "Muhammadiyah Riau University",
       logo: "/logos/university.png", // Pastikan file ada di public/logos/
       period: "Sep 2021 - Jan 2025",
-      desc: "Awardee Bidikmisi Scholarship - Wisudawan Angkatan XXVIII Terbaik dengan Predikat Cumlaude | Graduated in 3.5 years"
+      desc: "Awardee Bidikmisi Scholarship | GPA 3.84/4.00 | Wisudawan Angkatan XXVIII Terbaik dengan Predikat Cumlaude | Graduated in 3.5 years"
     },
     {
       degree: "Multimedia",
