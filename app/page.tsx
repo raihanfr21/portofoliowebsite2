@@ -82,18 +82,18 @@ const PORTFOLIO_DATA = {
 
   projects: [
     {
-      title: "E-Commerce Dashboard",
-      desc: "Platform manajemen toko online dengan analitik penjualan realtime dan manajemen stok barang.",
-      image: "/projects/project1.jpg", // Pastikan file ada di public/projects/
-      tags: ["Next.js", "Chart.js", "Supabase", "Tailwind"],
-      link: "#"
+      title: "EyeTify",
+      desc: "An mobile application for the challenges of early detection of eye diseases, especially for those with limited access to regular eye health services due to geographical, financial, or time constraints.",
+      image: "/projects/projects1.jpg", // Pastikan file ada di public/projects/
+      tags: ["Machine Learning", "Mobile Development", "Cloud Computing"],
+      link: "https://github.com/EyeTify"
     },
     {
-      title: "AI Chat Assistant",
-      desc: "Aplikasi chat bot pintar yang terintegrasi dengan OpenAI API untuk membantu customer service.",
+      title: "Doctor Appointment System",
+      desc: "Web-based platform that allows patients to book appointments with doctors online. This system is designed to simplify the registration process, reduce waiting times, and improve the efficiency of healthcare services in hospitals or clinics.",
       image: "/projects/project2.jpg", // Pastikan file ada di public/projects/
-      tags: ["React", "TypeScript", "OpenAI", "Vercel"],
-      link: "#"
+      tags: ["Laravel", "PHP", "JavaScript", "MySQL"],
+      link: "https://github.com/raihanfr21/Hospital-Appointment-Management-System"
     }
   ],
 
