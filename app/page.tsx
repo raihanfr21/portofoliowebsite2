@@ -8,10 +8,9 @@ import {
   Sun, Moon, Github, Linkedin, Mail, Download, 
   Briefcase, GraduationCap, Code2, BookOpen, 
   Award, ExternalLink, Menu, X, ArrowUpRight,
-  Users // <--- Icon baru untuk Training/Org
+  Users
 } from "lucide-react";
 
-// Letakkan ini di luar function Home(), misalnya di bawah imports
 const WhatsappIcon = ({ size = 24, className = "" }: { size?: number, className?: string }) => (
   <svg 
     xmlns="http://www.w3.org/2000/svg" 
@@ -30,15 +29,11 @@ const WhatsappIcon = ({ size = 24, className = "" }: { size?: number, className?
   </svg>
 );
 
-// ==========================================
-// 1. DATA PORTOFOLIO (EDIT BAGIAN INI)
-// ==========================================
 const PORTFOLIO_DATA = {
   name: "Raihan Fathurrahman", 
   role: "Full Stack Developer, Software Developer",
   about: "Fullstack Developer",
   
-  // Link Social Media
   social: {
     github: "https://github.com/raihanfr21",
     linkedin: "https://linkedin.com/in/raihanfth",
@@ -59,39 +54,38 @@ const PORTFOLIO_DATA = {
     {
       role: "IT Digitalization Internship",
       company: "PT Pertamina Hulu Rokan - Drilling Engineering HO",
-      logo: "/logos/company1.jpg", // Pastikan file ada di public/logos/
+      logo: "/logos/company1.jpg", 
       period: "Aug 2025 - Present",
       desc: "Supported the drilling engineer team by digitalizing and validating operational data through systematic querying, preprocessing, and consolidation—ensuring reliable, structured inputs for engineering analysis and reporting."
     },
     {
       role: "Non-Formal Support Staff",
       company: "Office of Jon Erizal — Member of Commission VI, DPR RI",
-      logo: "/logos/company2.png", // Pastikan file ada di public/logos/
+      logo: "/logos/company2.png", 
       period: "Sep 2021 - Feb 2024",
       desc: "Assisted in organizing constituency visits (reses), managed social media content, and coordinated with local communities and stakeholders during field activities."
     },
     {
       role: "Lecturer Assistant - Pengolahan Citra Digital Course",
       company: "Muhammadiyah Riau University",
-      logo: "/logos/university.png", // Pastikan file ada di public/logos/
+      logo: "/logos/university.png", 
       period: "Jan 2024 - Jan 2024",
       desc: "Assisted the lecturer in delivering course content on digital image processing, covering fundamental concepts and image processing techniques. Supervised laboratory sessions and guided students in implementing image processing algorithms using relevant programming tools."
     },
     {
       role: "Multimedia Internship",
       company: "Tanjak Photography Pekanbaru",
-      logo: "/logos/company3.png", // Pastikan file ada di public/logos/
+      logo: "/logos/company3.png", 
       period: "Sep - Oct 2019 & Jan - Mar 2020",
       desc: ""
     }
   ],
 
-  // --- BAGIAN BARU: TRAINING & ORGANIZATION ---
   training: [
     {
       role: "Cloud Computing Cohort",
       organization: "Bangkit Academy by Google, GoTo, Traveloka 2024",
-      logo: "/logos/training1.jpeg", // Ganti dengan logo penyelenggara
+      logo: "/logos/training1.jpeg", 
       period: "Feb 2024 - Jun 2024",
       desc: "Take an intensive 900+ hour program focused on mastering Cloud Computing with Google Cloud Platform (GCP) services such as Compute Engine, App Engine, Cloud Functions, and Cloud Storage, understand the concepts of DevOps, CI/CD, and efficient cloud infrastructure management, improve soft skills such as problem solving, communication, and team collaboration through industry training and mentoring sessions."
     }
@@ -101,14 +95,14 @@ const PORTFOLIO_DATA = {
     {
       degree: "Bachelor of Computer Science (S.Kom)",
       school: "Muhammadiyah Riau University",
-      logo: "/logos/university.png", // Pastikan file ada di public/logos/
+      logo: "/logos/university.png", 
       period: "Sep 2021 - Jan 2025",
       desc: "Awardee Bidikmisi Scholarship | GPA 3.84/4.00 | Wisudawan Angkatan XXVIII Terbaik dengan Predikat Cumlaude | Graduated in 3.5 years"
     },
     {
       degree: "Multimedia",
       school: "SMK Muhammadiyah 1 Pekanbaru",
-      logo: "/logos/school.png", // Pastikan file ada di public/logos/
+      logo: "/logos/school.png", 
       period: "2018 - 2021",
       desc: ""
     }
@@ -118,7 +112,7 @@ const PORTFOLIO_DATA = {
     {
       title: "EyeTify",
       desc: "An mobile application for the challenges of early detection of eye diseases, especially for those with limited access to regular eye health services due to geographical, financial, or time constraints.",
-      image: "/projects/projects1.jpg", // Pastikan file ada di public/projects/
+      image: "/projects/projects1.jpg", 
       video: "/projects/Post Launch EyeTify.mp4",
       tags: ["Machine Learning", "Mobile Development", "Cloud Computing"],
       link: "https://github.com/EyeTify"
@@ -126,14 +120,14 @@ const PORTFOLIO_DATA = {
     {
       title: "Doctor Appointment System",
       desc: "Web-based platform that allows patients to book appointments with doctors online. This system is designed to simplify the registration process, reduce waiting times, and improve the efficiency of healthcare services in hospitals or clinics.",
-      image: "/projects/project2.jpg", // Pastikan file ada di public/projects/
+      image: "/projects/project2.jpg", 
       tags: ["Laravel", "PHP", "JavaScript", "MySQL"],
       link: "https://github.com/raihanfr21/Hospital-Appointment-Management-System"
     },
     {
       title: "Long-Short Term Memory (LSTM) for Fresh Fruit Bunch Price Forecasting [Thesis Project]",
       desc: "Time series forecasting model to predict Fresh Fruit Bunch prices in Riau Province using the LSTM algorithm based on 10 years of weekly data (2014–2024).",
-      image: "/projects/project2.jpg", // Pastikan file ada di public/projects/
+      image: "/projects/project2.jpg", 
       tags: ["Python", "Deep Learning Algorithms"],
       link: "https://github.com/raihanfr21/LSTM-for-Fresh-Fruit-Bunch-FFB-Price-Forecasting"
     }
@@ -153,10 +147,6 @@ const PORTFOLIO_DATA = {
     },
   ]
 };
-
-// ==========================================
-// 2. KOMPONEN PENDUKUNG (UI COMPONENTS)
-// ==========================================
 
 const Navbar = () => {
   const { theme, setTheme } = useTheme();
@@ -252,10 +242,6 @@ const SectionTitle = ({ title, icon }: { title: string, icon?: React.ReactNode }
   </div>
 );
 
-// ==========================================
-// 3. MAIN PAGE STRUCTURE
-// ==========================================
-
 export default function Home() {
   return (
     <div className="min-h-screen bg-white dark:bg-neutral-950 text-neutral-900 dark:text-neutral-50 transition-colors duration-300 font-sans selection:bg-blue-100 dark:selection:bg-blue-900">
@@ -271,12 +257,7 @@ export default function Home() {
             transition={{ duration: 0.5 }}
             className="grid md:grid-cols-5 gap-12 items-center w-full"
           >
-            
-            {/* Foto Profil (Kanan di Desktop, Atas di Mobile) */}
-            {/* Foto Profil (Kanan di Desktop, Atas di Mobile) */}
             <div className="md:col-span-2 order-1 md:order-2 flex justify-center md:justify-end relative">
-              
-              {/* EFEK GLOW UPDATE: Menghapus 'animate-pulse' dan menaikkan opacity */}
               <div className="absolute inset-0 bg-gradient-to-tr from-blue-500 to-purple-500 rounded-full blur-3xl opacity-50 dark:opacity-40 scale-110 -z-10" />
               
               <div className="relative w-48 h-48 md:w-72 md:h-72 rounded-full overflow-hidden border-4 border-white dark:border-neutral-800 shadow-2xl z-10">
@@ -290,7 +271,6 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Teks Intro (Kiri di Desktop, Bawah di Mobile) */}
             <div className="md:col-span-3 order-2 md:order-1 text-center md:text-left">
               <div className="inline-block px-3 py-1 mb-4 text-xs font-medium tracking-wider text-blue-600 dark:text-blue-400 uppercase bg-blue-50 dark:bg-blue-900/20 rounded-full border border-blue-100 dark:border-blue-800">
                 Available for hire
@@ -306,7 +286,7 @@ export default function Home() {
                 <a href="#contact" className="px-8 py-3 bg-neutral-900 dark:bg-white text-white dark:text-black font-semibold rounded-lg hover:opacity-90 transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-1">
                   Contact Me
                 </a>
-                {/* Tombol Download CV (Menggunakan tag <a>) */}
+                
                 <a 
                   href="/Curriculum Vitae_Raihan Fathurrahman.pdf"             // <-- Pastikan nama file di folder public sama
                   download="CV_Raihan Fathurrahman.pdf"   // <-- Nama file yang akan tersimpan saat user download
@@ -382,7 +362,6 @@ export default function Home() {
                 
                 {/* Logo Wrapper */}
                 <div className="shrink-0 relative w-14 h-14 md:w-20 md:h-20 rounded-2xl overflow-hidden border border-neutral-200 dark:border-neutral-800 bg-white p-2 z-10 shadow-sm">
-                  {/* Pastikan path logo benar */}
                   <Image 
                     src={exp.logo} 
                     alt={exp.company} 
@@ -483,7 +462,6 @@ export default function Home() {
  {/* Project Media Preview (Video or Image) */}
                 <div className="relative w-full h-56 overflow-hidden bg-neutral-200 dark:bg-neutral-800">
                    {project.video ? (
-                     // JIKA ADA VIDEO: Tampilkan Video
                      <video
                        src={project.video}
                        autoPlay
@@ -494,7 +472,6 @@ export default function Home() {
                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                      />
                    ) : (
-                     // JIKA TIDAK ADA VIDEO: Tampilkan Image biasa
                      <Image 
                        src={project.image} 
                        alt={project.title} 
