@@ -11,6 +11,25 @@ import {
   Users // <--- Icon baru untuk Training/Org
 } from "lucide-react";
 
+// Letakkan ini di luar function Home(), misalnya di bawah imports
+const WhatsappIcon = ({ size = 24, className = "" }: { size?: number, className?: string }) => (
+  <svg 
+    xmlns="http://www.w3.org/2000/svg" 
+    width={size} 
+    height={size} 
+    viewBox="0 0 24 24" 
+    fill="none" 
+    stroke="currentColor" 
+    strokeWidth="2" 
+    strokeLinecap="round" 
+    strokeLinejoin="round" 
+    className={className}
+  >
+    <path d="M3 21l1.65-3.8a9 9 0 1 1 3.4 2.9L3 21" />
+    <path d="M9 10a.5.5 0 0 0 1 1h0a.5.5 0 0 0 1 1h0a.5.5 0 0 0 1 1h0a.5.5 0 0 0 1 1h0" />
+  </svg>
+);
+
 // ==========================================
 // 1. DATA PORTOFOLIO (EDIT BAGIAN INI)
 // ==========================================
@@ -24,6 +43,7 @@ const PORTFOLIO_DATA = {
     github: "https://github.com/raihanfr21",
     linkedin: "https://linkedin.com/in/raihanfth",
     email: "mailto:raihanfathurrahman.rft@gmail.com",
+    whatsapp: "wa.me/6285178010715"
   },
 
   skills: ["APIs", "PHP", "PowerBI", "Python", "JavaScript", "Laravel", "React", "Next.js", "Node.js", "Tailwind CSS", "MySQL", "Google Cloud", "Docker", "CI/CD", "Macro VBA"],
@@ -94,6 +114,13 @@ const PORTFOLIO_DATA = {
       image: "/projects/project2.jpg", // Pastikan file ada di public/projects/
       tags: ["Laravel", "PHP", "JavaScript", "MySQL"],
       link: "https://github.com/raihanfr21/Hospital-Appointment-Management-System"
+    },
+    {
+      title: "Long-Short Term Memory (LSTM) for Fresh Fruit Bunch Price Forecasting [Thesis Project]",
+      desc: "Time series forecasting model to predict Fresh Fruit Bunch prices in Riau Province using the LSTM algorithm based on 10 years of weekly data (2014–2024).",
+      image: "/projects/project2.jpg", // Pastikan file ada di public/projects/
+      tags: ["Python", "Deep Learning Algorithms"],
+      link: "https://github.com/raihanfr21/LSTM-for-Fresh-Fruit-Bunch-FFB-Price-Forecasting"
     }
   ],
 
@@ -231,10 +258,13 @@ export default function Home() {
           >
             
             {/* Foto Profil (Kanan di Desktop, Atas di Mobile) */}
+            {/* Foto Profil (Kanan di Desktop, Atas di Mobile) */}
             <div className="md:col-span-2 order-1 md:order-2 flex justify-center md:justify-end relative">
-              <div className="absolute inset-0 bg-gradient-to-tr from-blue-500 to-purple-500 rounded-full blur-3xl opacity-30 dark:opacity-20 scale-110 -z-10 animate-pulse" />
+              
+              {/* EFEK GLOW UPDATE: Menghapus 'animate-pulse' dan menaikkan opacity */}
+              <div className="absolute inset-0 bg-gradient-to-tr from-blue-500 to-purple-500 rounded-full blur-3xl opacity-50 dark:opacity-40 scale-110 -z-10" />
+              
               <div className="relative w-48 h-48 md:w-72 md:h-72 rounded-full overflow-hidden border-4 border-white dark:border-neutral-800 shadow-2xl z-10">
-                {/* Pastikan file profile.jpg ada di folder public */}
                 <Image 
                   src="/profile.jpg" 
                   alt={PORTFOLIO_DATA.name}
@@ -281,6 +311,9 @@ export default function Home() {
                 <a href={PORTFOLIO_DATA.social.email}>
                   <Mail className="hover:text-red-500 dark:hover:text-red-400 cursor-pointer transition-colors w-6 h-6" />
                 </a>
+                <a href={PORTFOLIO_DATA.social.whatsapp} target="_blank" rel="noopener noreferrer">
+                  <WhatsappIcon className="hover:text-green-500 dark:hover:text-green-400 cursor-pointer transition-colors w-6 h-6" />
+                </a>
               </div>
             </div>
           </motion.div>
@@ -315,7 +348,7 @@ export default function Home() {
             {PORTFOLIO_DATA.experience.map((exp, idx) => (
               <div key={idx} className="flex gap-6 md:gap-8 items-start relative group">
                 {/* Timeline Line */}
-                <div className="absolute left-[28px] md:left-[36px] top-16 bottom-[-48px] w-0.5 bg-neutral-200 dark:bg-neutral-800 last:hidden" />
+                <div className="absolute left-[28px] md:left-[36px] top-16 bottom-[-48px] w-0.5 bg-neutral-200 dark:bg-neutral-800" />
                 
                 {/* Logo Wrapper */}
                 <div className="shrink-0 relative w-14 h-14 md:w-20 md:h-20 rounded-2xl overflow-hidden border border-neutral-200 dark:border-neutral-800 bg-white p-2 z-10 shadow-sm">
