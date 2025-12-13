@@ -43,10 +43,18 @@ const PORTFOLIO_DATA = {
     github: "https://github.com/raihanfr21",
     linkedin: "https://linkedin.com/in/raihanfth",
     email: "mailto:raihanfathurrahman.rft@gmail.com",
-    whatsapp: "wa.me/6285178010715"
+    whatsapp: "https://wa.me/6285178010715"
   },
 
-  skills: ["APIs", "PHP", "PowerBI", "Python", "JavaScript", "Laravel", "React", "Next.js", "Node.js", "Tailwind CSS", "MySQL", "Google Cloud", "Docker", "CI/CD", "Macro VBA"],
+  skills: ["APIs", "PHP", "PowerBI", "Python", "JavaScript", "Laravel", "React", "Next.js", "Node.js", "Tailwind CSS", "MySQL", "Google Cloud", "Docker", "CI/CD", "Data Science", "Macro VBA"],
+  softSkills: [
+    "Public Speaking",
+    "Leadership",
+    "Time Management",
+    "Problem Solving",
+    "Teamwork",
+    "Adaptability"
+  ],
 
   experience: [
     {
@@ -79,7 +87,7 @@ const PORTFOLIO_DATA = {
       organization: "Bangkit Academy by Google, GoTo, Traveloka 2024",
       logo: "/logos/training1.jpeg", // Ganti dengan logo penyelenggara
       period: "Feb 2024 - Jun 2024",
-      desc: "Mengikuti pelatihan intensif pengembangan web modern menggunakan MERN Stack, Next.js, dan Deployment CI/CD."
+      desc: "Take an intensive 900+ hour program focused on mastering Cloud Computing with Google Cloud Platform (GCP) services such as Compute Engine, App Engine, Cloud Functions, and Cloud Storage, understand the concepts of DevOps, CI/CD, and efficient cloud infrastructure management, improve soft skills such as problem solving, communication, and team collaboration through industry training and mentoring sessions."
     }
   ],
 
@@ -329,13 +337,28 @@ export default function Home() {
               </p>
             </div>
             <div>
-              <h3 className="font-semibold mb-4 text-lg">Tech Stack</h3>
+              <h3 className="font-semibold mb-4 text-lg flex items-center gap-2">
+                <span className="w-2 h-2 bg-green-500 rounded-full"></span> Tech Stack
+              </h3>
               <div className="flex flex-wrap gap-2">
                 {PORTFOLIO_DATA.skills.map((skill) => (
                   <span key={skill} className="px-4 py-2 bg-white dark:bg-neutral-800 border border-neutral-200 dark:border-neutral-700 rounded-lg text-sm font-medium hover:border-blue-500 dark:hover:border-blue-500 transition-colors cursor-default shadow-sm">
                     {skill}
                   </span>
                 ))}
+              </div>
+            {/* SOFT SKILLS (BARU) */}
+              <div>
+                <h3 className="font-semibold mb-4 text-lg flex items-center gap-2">
+                  <span className="w-2 h-2 bg-green-500 rounded-full"></span> Soft Skills
+                </h3>
+                <div className="flex flex-wrap gap-2">
+                  {PORTFOLIO_DATA.softSkills.map((skill) => (
+                    <span key={skill} className="px-4 py-2 bg-white dark:bg-neutral-800 border border-neutral-200 dark:border-neutral-700 rounded-lg text-sm font-medium hover:border-green-500 dark:hover:border-green-500 transition-colors cursor-default shadow-sm">
+                      {skill}
+                    </span>
+                  ))}
+                </div>
               </div>
             </div>
           </div>
