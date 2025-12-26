@@ -128,7 +128,8 @@ const PORTFOLIO_DATA = {
     {
       title: "Doctor Appointment System",
       desc: "Web-based platform that allows patients to book appointments with doctors online. This system is designed to simplify the registration process, reduce waiting times, and improve the efficiency of healthcare services in hospitals or clinics.",
-      image: "/projects/project2.jpg", 
+      image: "/projects/project4.jpg",
+      video: "/projects/Projects3.mp4", 
       tags: ["Laravel", "PHP", "JavaScript", "MySQL"],
       link: "https://github.com/raihanfr21/Hospital-Appointment-Management-System"
     },
