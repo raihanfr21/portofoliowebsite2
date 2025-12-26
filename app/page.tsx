@@ -121,6 +121,7 @@ const PORTFOLIO_DATA = {
       title: "Digital Wedding Invitation",
       desc: "A web-based digital wedding invitation that provides event details, countdown timer, gallery, background music, and guest interaction features, designed to replace traditional printed invitations with a modern and elegant experience.",
       image: "/projects/projects2.png",
+      video: "/projects/Projects2.mp4",
       tags: ["HTML", "CSS", "JavaScript"],
       link: "https://digital-invitation-feri-citra.vercel.app/"
     },
