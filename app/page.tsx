@@ -552,30 +552,8 @@ export default function Home() {
            <div className="text-center mb-10">
               <h2 className="text-3xl font-bold mb-4">Let's Work Together</h2>
               <p className="text-neutral-600 dark:text-neutral-400">
-                Tertarik berkolaborasi atau punya pertanyaan? Isi form di bawah ini.
+                Interested in collaborating or have questions? Please contact me via email or WhatsApp. Click the shortcut on the Home page.
               </p>
-           </div>
-
-           <div className="p-8 border border-neutral-200 dark:border-neutral-800 rounded-2xl bg-white dark:bg-neutral-900 shadow-lg">
-             <form className="space-y-6">
-               <div className="grid md:grid-cols-2 gap-6">
-                  <div>
-                    <label className="block text-sm font-semibold mb-2 text-neutral-700 dark:text-neutral-300">Name</label>
-                    <input type="text" className="w-full px-4 py-3 rounded-lg bg-neutral-50 dark:bg-neutral-950 border border-neutral-200 dark:border-neutral-800 focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-all" placeholder="John Doe" />
-                  </div>
-                  <div>
-                    <label className="block text-sm font-semibold mb-2 text-neutral-700 dark:text-neutral-300">Email</label>
-                    <input type="email" className="w-full px-4 py-3 rounded-lg bg-neutral-50 dark:bg-neutral-950 border border-neutral-200 dark:border-neutral-800 focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-all" placeholder="name@example.com" />
-                  </div>
-               </div>
-               <div>
-                 <label className="block text-sm font-semibold mb-2 text-neutral-700 dark:text-neutral-300">Message</label>
-                 <textarea rows={5} className="w-full px-4 py-3 rounded-lg bg-neutral-50 dark:bg-neutral-950 border border-neutral-200 dark:border-neutral-800 focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-all resize-none" placeholder="Ceritakan detail project Anda..." />
-               </div>
-               <button type="button" className="w-full py-4 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-lg transition-colors shadow-lg hover:shadow-blue-500/30">
-                 Send Message
-               </button>
-             </form>
            </div>
         </section>
 
