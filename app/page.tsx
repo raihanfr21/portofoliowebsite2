@@ -118,6 +118,14 @@ const PORTFOLIO_DATA = {
       link: "https://github.com/EyeTify"
     },
     {
+      title: "Web GIS - ReCharge Riau",
+      desc: "A Web GIS platform designed to support the electric vehicle ecosystem in Riau. It features an interactive map to locate charging stations (SPKLU), providing users with real-time data to encourage the transition to green energy and eco-friendly transportation.",
+      image: "/projects/recharge-riau.png",
+      video: "/projects/Projects4.mp4",
+      tags: ["Laravel", "LeafletJS", "MySQL", "Bootstrap"], 
+      link: "https://github.com/raihanfr21/ReCharge-Riau-Web-GIS"
+    },
+    {
       title: "Digital Wedding Invitation",
       desc: "A web-based digital wedding invitation that provides event details, countdown timer, gallery, background music, and guest interaction features, designed to replace traditional printed invitations with a modern and elegant experience.",
       image: "/projects/projects2.png",
@@ -459,7 +467,7 @@ export default function Home() {
 
         {/* --- PROJECTS (With Images) --- */}
         <section id="projects">
-          <SectionTitle title="Selected Projects" icon={<Code2 size={24} />} />
+          <SectionTitle title="Projects" icon={<Code2 size={24} />} />
           <div className="grid md:grid-cols-2 gap-8">
             {PORTFOLIO_DATA.projects.map((project, idx) => (
               <motion.div 
