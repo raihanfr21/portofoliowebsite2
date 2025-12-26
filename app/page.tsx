@@ -118,6 +118,13 @@ const PORTFOLIO_DATA = {
       link: "https://github.com/EyeTify"
     },
     {
+      title: "Digital Wedding Invitation",
+      desc: "A web-based digital wedding invitation that provides event details, countdown timer, gallery, background music, and guest interaction features, designed to replace traditional printed invitations with a modern and elegant experience.",
+      image: "/projects/projects2.png",
+      tags: ["HTML", "CSS", "JavaScript"],
+      link: "https://digital-invitation-feri-citra.vercel.app/"
+    },
+    {
       title: "Doctor Appointment System",
       desc: "Web-based platform that allows patients to book appointments with doctors online. This system is designed to simplify the registration process, reduce waiting times, and improve the efficiency of healthcare services in hospitals or clinics.",
       image: "/projects/project2.jpg", 
