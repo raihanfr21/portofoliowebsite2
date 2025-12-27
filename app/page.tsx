@@ -160,7 +160,7 @@ const PORTFOLIO_DATA = {
     {
       title: "Long-Short Term Memory (LSTM) for Fresh Fruit Bunch Price Forecasting [Thesis Project]",
       desc: "Time series forecasting model to predict Fresh Fruit Bunch prices in Riau Province using the LSTM algorithm based on 10 years of weekly data (2014–2024).",
-      image: "/projects/project2.jpg", 
+      image: "/projects/Projects7.jpg", 
       tags: ["Python", "Deep Learning Algorithms"],
       link: "https://github.com/raihanfr21/LSTM-for-Fresh-Fruit-Bunch-FFB-Price-Forecasting"
     }
