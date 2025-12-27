@@ -141,6 +141,14 @@ const PORTFOLIO_DATA = {
       tags: ["HTML", "CSS", "JavaScript"],
       link: "https://digital-invitation-feri-citra.vercel.app/"
     },
+        {
+      title: "Vehicle Detection System - Computer Vision",
+      desc: "An intelligent traffic monitoring system using Computer Vision to detect and count vehicles in real-time. Built with OpenCV, it utilizes Background Subtraction (MOG2) and Morphological transformations to accurately track vehicle movements and monitor traffic flow via video streams.",
+      image: "/projects/comvis.jpg",
+      video: "/projects/Projects6.mp4", 
+      tags: ["Python", "OpenCV", "NumPy", "Computer Vision"],
+      link: "https://github.com/raihanfr21/Computer-Vision-2023-Project-Vehicle-Detection"
+    },
     {
       title: "Doctor Appointment System",
       desc: "Web-based platform that allows patients to book appointments with doctors online. This system is designed to simplify the registration process, reduce waiting times, and improve the efficiency of healthcare services in hospitals or clinics.",
