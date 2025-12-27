@@ -117,6 +117,14 @@ const PORTFOLIO_DATA = {
       tags: ["Machine Learning", "Mobile Development", "Cloud Computing"],
       link: "https://github.com/EyeTify"
     },
+  {
+    title: "SANTUN Riau - Sistem Informasi Pengaduan Masyarakat",
+    desc: "A community complaint platform for Riau citizens to report public service issues. Integrated with Cloudinary for secure evidence uploads and Neon PostgreSQL for serverless data management, ensuring a seamless and transparent reporting workflow.",
+    image: "/projects/santun-riau.png",
+    video: "/projects/Projects5.mp4",
+    tags: ["Laravel", "Neon PostgreSQL", "Cloudinary", "Vercel"], 
+    link: "https://santun-riau.vercel.app/"
+  },
     {
       title: "Web GIS - ReCharge Riau",
       desc: "A Web GIS platform designed to support the electric vehicle ecosystem in Riau. It features an interactive map to locate charging stations (SPKLU), providing users with real-time data to encourage the transition to green energy and eco-friendly transportation.",
