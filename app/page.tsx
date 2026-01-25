@@ -41,7 +41,7 @@ const PORTFOLIO_DATA = {
     whatsapp: "https://wa.me/6285178010715"
   },
 
-  skills: ["APIs", "PHP", "PowerBI", "Python", "JavaScript", "Laravel", "React", "Next.js", "Node.js", "Tailwind CSS", "MySQL", "Google Cloud", "Docker", "CI/CD", "Data Science", "Macro VBA"],
+  skills: ["APIs", "PHP", "PowerBI", "Python", "JavaScript", "Laravel", "React", "Next.js", "Node.js", "Tailwind CSS", "MySQL", "Google Cloud", "Docker", "CI/CD", "Data Science", "Macro VBA", "MsOffice"],
   softSkills: [
     "Leadership",
     "Time Management",
@@ -52,7 +52,7 @@ const PORTFOLIO_DATA = {
 
   experience: [
     {
-      role: "Drilling Engineer Assistant",
+      role: "Drilling Engineer Assistant - Internship",
       company: "PT Pertamina Hulu Rokan - Drilling Engineering HO",
       logo: "/logos/company1.jpg", 
       period: "Aug 2025 - Present",
@@ -295,7 +295,7 @@ export default function Home() {
               
               <div className="relative w-48 h-48 md:w-72 md:h-72 rounded-full overflow-hidden border-4 border-white dark:border-neutral-800 shadow-2xl z-10">
                 <Image 
-                  src="/profile.jpg" 
+                  src="/profiles.jpeg" 
                   alt={PORTFOLIO_DATA.name}
                   fill
                   priority
