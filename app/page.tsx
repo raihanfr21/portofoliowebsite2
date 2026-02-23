@@ -55,7 +55,7 @@ const PORTFOLIO_DATA = {
       role: "IT Digitalization - Internship",
       company: "PT Pertamina Hulu Rokan - Drilling Engineering HO",
       logo: "/logos/company1.jpg", 
-      period: "Aug 2025 - Present",
+      period: "Aug 2025 - Feb 2026",
       desc: "Supported the drilling engineer team by digitalizing and validating operational data through systematic querying, preprocessing, and consolidation—ensuring reliable, structured inputs for engineering analysis and reporting."
     },
     {
