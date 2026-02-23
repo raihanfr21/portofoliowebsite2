@@ -52,7 +52,7 @@ const PORTFOLIO_DATA = {
 
   experience: [
     {
-      role: "Drilling Engineer Assistant - Internship",
+      role: "IT Digitalization - Internship",
       company: "PT Pertamina Hulu Rokan - Drilling Engineering HO",
       logo: "/logos/company1.jpg", 
       period: "Aug 2025 - Present",
