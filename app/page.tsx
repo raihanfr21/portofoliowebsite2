@@ -8,7 +8,7 @@ import {
   Sun, Moon, Github, Linkedin, Mail, Download, 
   Briefcase, GraduationCap, Code2, BookOpen, 
   Award, ExternalLink, Menu, X, ArrowUpRight,
-  Users
+  Users, Trophy, MessageSquare 
 } from "lucide-react";
 
 const WhatsappIcon = ({ size = 24, className = "" }: { size?: number, className?: string }) => (
@@ -158,6 +158,32 @@ const PORTFOLIO_DATA = {
     }
   ],
 
+  awards: [
+    {
+      title: "Best Internship Batch 7 PT Pertamina Hulu Rokan",
+      issuer: "National",
+      date: "2026",
+      desc: "Recognized as one of the best PHR Batch 7 internship participants for outstanding performance out of 111 national participants.",
+      image: "/awards/award2.jpg" 
+    },
+    {
+      title: "Wisudawan Terbaik Angkatan XXVIII",
+      issuer: "University",
+      date: "2025",
+      desc: "Awarded Best Graduate with Cumlaude predicate (GPA 3.84/4.00) and graduated in 3.3 years.",
+      image: "/awards/award1.jpg" // Pastikan ada gambar di folder public/awards/
+    }
+  ],
+
+  recommendations: [
+    {
+      name: "Adrian Ismatullah Gani",
+      role: "Sr Officer Training & Certification / Internship Coordinator",
+      company: "PT Pertamina Hulu Rokan",
+      text: "Kinerja/performa sangat baik dan perilaku mencerminkan tata nilai AKHLAK (Amanah, Kompeten, Harmonis, Loyal, Adaptif, dan Kolaboratif)."
+    }
+  ],
+
   certifications: [
     "Google Cloud Computing Foundations Certificate",
     "Google IT Support",
@@ -185,6 +211,7 @@ const Navbar = () => {
     { name: "About", href: "#about" },
     { name: "Experience", href: "#experience" },
     { name: "Projects", href: "#projects" },
+    { name: "Awards", href: "#awards" },
     { name: "Contact", href: "#contact" },
   ];
 
@@ -313,8 +340,8 @@ export default function Home() {
                 </a>
                 
                 <a 
-                  href="/Curriculum Vitae_Raihan Fathurrahman.pdf"             // <-- Pastikan nama file di folder public sama
-                  download="CV_Raihan Fathurrahman.pdf"   // <-- Nama file yang akan tersimpan saat user download
+                  href="/Curriculum Vitae_Raihan Fathurrahman.pdf"             
+                  download="CV_Raihan Fathurrahman.pdf"   
                   className="px-8 py-3 border border-neutral-200 dark:border-neutral-700 font-medium rounded-lg hover:bg-neutral-50 dark:hover:bg-neutral-900 transition-colors flex items-center gap-2 cursor-pointer text-neutral-900 dark:text-white"
                 >
                   <Download size={18} /> Download CV
@@ -352,14 +379,14 @@ export default function Home() {
               <h3 className="font-semibold mb-4 text-lg flex items-center gap-2">
                 <span className="w-2 h-2 bg-green-500 rounded-full"></span> Tech Stack
               </h3>
-              <div className="flex flex-wrap gap-2">
+              <div className="flex flex-wrap gap-2 mb-8">
                 {PORTFOLIO_DATA.skills.map((skill) => (
                   <span key={skill} className="px-4 py-2 bg-white dark:bg-neutral-800 border border-neutral-200 dark:border-neutral-700 rounded-lg text-sm font-medium hover:border-blue-500 dark:hover:border-blue-500 transition-colors cursor-default shadow-sm">
                     {skill}
                   </span>
                 ))}
               </div>
-            {/* SOFT SKILLS (BARU) */}
+            {/* SOFT SKILLS */}
               <div>
                 <h3 className="font-semibold mb-4 text-lg flex items-center gap-2">
                   <span className="w-2 h-2 bg-green-500 rounded-full"></span> Soft Skills
@@ -376,16 +403,14 @@ export default function Home() {
           </div>
         </section>
 
-        {/* --- EXPERIENCE (With Logos) --- */}
+        {/* --- EXPERIENCE --- */}
         <section id="experience">
           <SectionTitle title="Work Experience" icon={<Briefcase size={24} />} />
           <div className="space-y-12">
             {PORTFOLIO_DATA.experience.map((exp, idx) => (
               <div key={idx} className="flex gap-6 md:gap-8 items-start relative group">
-                {/* Timeline Line */}
                 <div className="absolute left-[28px] md:left-[36px] top-16 bottom-[-48px] w-0.5 bg-neutral-200 dark:bg-neutral-800" />
                 
-                {/* Logo Wrapper */}
                 <div className="shrink-0 relative w-14 h-14 md:w-20 md:h-20 rounded-2xl overflow-hidden border border-neutral-200 dark:border-neutral-800 bg-white p-2 z-10 shadow-sm">
                   <Image 
                     src={exp.logo} 
@@ -395,7 +420,6 @@ export default function Home() {
                   />
                 </div>
 
-                {/* Content */}
                 <div className="flex-1 pt-2">
                   <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center mb-2">
                     <h3 className="text-xl font-bold text-neutral-900 dark:text-neutral-100 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">{exp.role}</h3>
@@ -409,16 +433,14 @@ export default function Home() {
           </div>
         </section>
 
-        {/* --- TRAINING & ORGANISATIONAL (NEW SECTION) --- */}
+        {/* --- TRAINING --- */}
         <section id="training">
           <SectionTitle title="Training" icon={<Users size={24} />} />
           <div className="space-y-12">
             {PORTFOLIO_DATA.training.map((item, idx) => (
               <div key={idx} className="flex gap-6 md:gap-8 items-start relative group">
-                {/* Timeline Line */}
                 <div className="absolute left-[28px] md:left-[36px] top-16 bottom-[-48px] w-0.5 bg-neutral-200 dark:bg-neutral-800 last:hidden" />
                 
-                {/* Logo Wrapper */}
                 <div className="shrink-0 relative w-14 h-14 md:w-20 md:h-20 rounded-2xl overflow-hidden border border-neutral-200 dark:border-neutral-800 bg-white p-2 z-10 shadow-sm">
                   <Image 
                     src={item.logo} 
@@ -428,7 +450,6 @@ export default function Home() {
                   />
                 </div>
 
-                {/* Content */}
                 <div className="flex-1 pt-2">
                   <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center mb-2">
                     <h3 className="text-xl font-bold text-neutral-900 dark:text-neutral-100 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">{item.role}</h3>
@@ -442,13 +463,12 @@ export default function Home() {
           </div>
         </section>
 
-        {/* --- EDUCATION (With Logos) --- */}
+        {/* --- EDUCATION --- */}
         <section id="education">
           <SectionTitle title="Education" icon={<GraduationCap size={24} />} />
           <div className="grid gap-6">
             {PORTFOLIO_DATA.education.map((edu, idx) => (
               <div key={idx} className="flex flex-col md:flex-row gap-6 p-6 border border-neutral-200 dark:border-neutral-800 rounded-2xl bg-neutral-50 dark:bg-neutral-900/20 hover:bg-white dark:hover:bg-neutral-900 transition-all shadow-sm hover:shadow-md">
-                 {/* Logo Sekolah */}
                 <div className="shrink-0 relative w-16 h-16 bg-white rounded-xl border border-neutral-200 dark:border-neutral-700 overflow-hidden mx-auto md:mx-0">
                    <Image 
                      src={edu.logo} 
@@ -473,7 +493,7 @@ export default function Home() {
           </div>
         </section>
 
-        {/* --- PROJECTS (With Images) --- */}
+        {/* --- PROJECTS --- */}
         <section id="projects">
           <SectionTitle title="Projects" icon={<Code2 size={24} />} />
           <div className="grid md:grid-cols-2 gap-8">
@@ -484,7 +504,6 @@ export default function Home() {
                 transition={{ type: "spring", stiffness: 300 }}
                 className="group border border-neutral-200 dark:border-neutral-800 rounded-2xl overflow-hidden bg-white dark:bg-neutral-900 flex flex-col h-full shadow-sm hover:shadow-2xl dark:hover:shadow-neutral-900/50 transition-all"
               >
- {/* Project Media Preview (Video or Image) */}
                 <div className="relative w-full h-56 overflow-hidden bg-neutral-200 dark:bg-neutral-800">
                    {project.video ? (
                      <video
@@ -493,7 +512,7 @@ export default function Home() {
                        muted
                        loop
                        playsInline
-                       poster={project.image} // Gambar muncul saat video loading
+                       poster={project.image}
                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                      />
                    ) : (
@@ -505,7 +524,6 @@ export default function Home() {
                      />
                    )}
                    
-                   {/* Overlay Link Icon (Tetap Sama) */}
                    <a href={project.link} className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white z-10">
                       <div className="flex items-center gap-2 font-medium bg-white/20 backdrop-blur-md px-5 py-2.5 rounded-full border border-white/30 hover:bg-white/30 transition-colors">
                         View Project <ArrowUpRight size={18} />
@@ -513,7 +531,6 @@ export default function Home() {
                    </a>
                 </div>
 
-                {/* Project Content */}
                 <div className="p-6 flex flex-col flex-1">
                   <div className="flex justify-between items-start mb-4">
                     <h3 className="text-xl font-bold group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
@@ -525,7 +542,6 @@ export default function Home() {
                     {project.desc}
                   </p>
                   
-                  {/* Tags */}
                   <div className="flex flex-wrap gap-2 mt-auto">
                     {project.tags.map((tag) => (
                       <span key={tag} className="text-xs font-semibold px-2.5 py-1 bg-neutral-100 dark:bg-neutral-800 border border-neutral-200 dark:border-neutral-700 rounded text-neutral-600 dark:text-neutral-300">
@@ -535,6 +551,79 @@ export default function Home() {
                   </div>
                 </div>
               </motion.div>
+            ))}
+          </div>
+        </section>
+
+        {/* --- AWARDS (NEW SECTION) --- */}
+        <section id="awards">
+          <SectionTitle title="Awards & Achievements" icon={<Trophy size={24} />} />
+          <div className="grid md:grid-cols-2 gap-8">
+            {PORTFOLIO_DATA.awards.map((award, idx) => (
+              <div 
+                key={idx} 
+                className="group border border-neutral-200 dark:border-neutral-800 rounded-2xl overflow-hidden bg-white dark:bg-neutral-900 flex flex-col h-full shadow-sm hover:shadow-md transition-all"
+              >
+                {/* Award Image */}
+                <div className="relative w-full h-48 bg-neutral-100 dark:bg-neutral-800 border-b border-neutral-200 dark:border-neutral-800">
+                  <Image 
+                    src={award.image} 
+                    alt={award.title} 
+                    fill 
+                    className="object-cover group-hover:scale-105 transition-transform duration-500" 
+                  />
+                </div>
+                {/* Award Details */}
+                <div className="p-6 flex flex-col flex-1">
+                  <div className="flex justify-between items-start mb-2">
+                    <h3 className="text-lg font-bold text-neutral-900 dark:text-white">
+                      {award.title}
+                    </h3>
+                  </div>
+                  <div className="flex justify-between items-center mb-4">
+                    <span className="text-sm font-medium text-blue-600 dark:text-blue-400">
+                      {award.issuer}
+                    </span>
+                    <span className="text-xs text-neutral-500 font-mono bg-neutral-100 dark:bg-neutral-800 px-2 py-1 rounded">
+                      {award.date}
+                    </span>
+                  </div>
+                  <p className="text-neutral-600 dark:text-neutral-400 text-sm leading-relaxed">
+                    {award.desc}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* --- RECOMMENDATIONS (NEW SECTION) --- */}
+        <section id="recommendations">
+          <SectionTitle title="Recommendations" icon={<MessageSquare size={24} />} />
+          <div className="grid md:grid-cols-2 gap-8">
+            {PORTFOLIO_DATA.recommendations.map((rec, idx) => (
+              <div 
+                key={idx} 
+                className="p-8 border border-neutral-200 dark:border-neutral-800 rounded-2xl bg-neutral-50 dark:bg-neutral-900/20 relative"
+              >
+                {/* Quote Icon Background */}
+                <div className="absolute top-6 right-6 text-neutral-200 dark:text-neutral-800 z-0">
+                  <svg width="40" height="40" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M14.017 21L16.411 14.604C16.924 13.094 17.18 11.536 17.18 9.93201C17.18 6.64001 15.65 5 12.59 5V8.16C13.882 8.16 14.528 8.85201 14.528 10.236C14.528 10.876 14.316 11.458 13.892 11.982L10.3 11.666L8.806 18L14.017 21ZM5.21101 21L7.60501 14.604C8.11801 13.094 8.37401 11.536 8.37401 9.93201C8.37401 6.64001 6.84401 5 3.78401 5V8.16C5.07601 8.16 5.72201 8.85201 5.72201 10.236C5.72201 10.876 5.51001 11.458 5.08601 11.982L1.49401 11.666L0 18L5.21101 21Z" />
+                  </svg>
+                </div>
+                
+                <p className="text-neutral-700 dark:text-neutral-300 relative z-10 mb-6 italic leading-relaxed text-sm md:text-base">
+                  "{rec.text}"
+                </p>
+                <div className="flex items-center gap-4 relative z-10">
+                  <div>
+                    <h4 className="font-bold text-neutral-900 dark:text-white">{rec.name}</h4>
+                    <p className="text-xs text-neutral-500">{rec.role}</p>
+                    <p className="text-xs font-medium text-blue-600 dark:text-blue-400 mt-0.5">{rec.company}</p>
+                  </div>
+                </div>
+              </div>
             ))}
           </div>
         </section>
