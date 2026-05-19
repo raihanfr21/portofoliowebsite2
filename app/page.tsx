@@ -41,7 +41,7 @@ const PORTFOLIO_DATA = {
     whatsapp: "https://wa.me/6285178010715"
   },
 
-  skills: ["APIs", "PHP", "PowerBI", "Python", "JavaScript", "Laravel", "React", "Next.js", "Node.js", "Tailwind CSS", "MySQL", "Google Cloud", "Docker", "CI/CD", "Data Science", "Macro VBA", "MsOffice"],
+  skills: ["APIs", "PHP", "PowerBI", "Tableau", "Python", "JavaScript", "Laravel", "React", "Next.js", "Node.js", "Tailwind CSS", "MySQL", "Google Cloud", "Docker", "CI/CD", "Data Science", "Macro VBA", "MsOffice"],
   softSkills: [
     "Leadership",
     "Time Management",
@@ -52,7 +52,7 @@ const PORTFOLIO_DATA = {
 
   experience: [
     {
-      role: "IT Support - Drilling Engineering HO",
+      role: "IT Automation Developer - Drilling Engineering HO",
       company: "PT Pertamina Hulu Rokan - Internship",
       logo: "/logos/company1.jpg", 
       period: "Aug 2025 - Feb 2026",
@@ -161,7 +161,7 @@ const PORTFOLIO_DATA = {
   awards: [
     {
       title: "Best Internship Batch 7 PT Pertamina Hulu Rokan",
-      issuer: "National",
+      issuer: "Company",
       date: "2026",
       desc: "Recognized as one of the best PHR Batch 7 internship participants for outstanding performance out of 111 national participants.",
       image: "/awards/award2.jpg" 
@@ -372,7 +372,10 @@ export default function Home() {
           <div className="grid md:grid-cols-2 gap-12">
             <div className="bg-neutral-50 dark:bg-neutral-900/30 p-8 rounded-2xl border border-neutral-100 dark:border-neutral-800">
               <p className="text-neutral-700 dark:text-neutral-300 leading-relaxed text-lg">
-                Bachelor of Computer Science from Muhammadiyah Riau University, with a Fullstack Developer role. I have a strong interest in web development, data science, and cloud computing. Currently, i'm participating in an internship at PT Pertamina Hulu Rokan (PHR) in the Drilling Engineering HO division, where I'm learning about digitalization and technical data management in the energy industry. I am an output-oriented person, quick to adapt, and have a high enthusiasm for learning new technologies. Currently, I am focused on developing a career in information technology and data analysis, with the aim of contributing through effective and impactful digital solutions.
+                Bachelor of Computer Science graduate with comprehensive expertise in Full-Stack Development, Cloud Computing, and Data Science.
+Possesses hands-on experience in designing and executing high-impact software solutions, including a data processing automation system at
+PT Pertamina Hulu Rokan that drastically improved operational efficiency. Detail-oriented, adaptable, and ready to contribute to building
+efficient and scalable software architectures.
               </p>
             </div>
             <div>
